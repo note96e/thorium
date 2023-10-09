@@ -12,7 +12,7 @@ https://github.com/note96e/thorium/tree/main/case
 .stepファイルは、そのままJLCPCBで注文できます(Black Resinがお勧めです)。  
 
 ### PCB (厚さ1.6mm)
-以下からKiCAD7のデータをダウンロードできます。  
+以下からKiCad7のデータをダウンロードできます。  
 - 左側 (1)
     - https://github.com/note96e/thorium/tree/main/pcbl
 - 右側 (1)
@@ -132,7 +132,7 @@ thorium_reset-seeeduino_xiao_ble-zmk.uf2
 thorium_reset_left-seeeduino_xiao_ble-zmk.uf2
 1. 右側のXIAOをケーブルに接続し、解凍した以下のファームウェアを書き込みます。書き込んだらケーブルを外して※完全に動作しない状態にします。  
 thorium_reset_left-seeeduino_xiao_ble-zmk.uf2
-1. これでペアリングが解除された状態に戻ります。
+1. これでペアリングが解除された状態に戻ります。前述の初回のファームウェア書き込みを行ってください。
 
 ※左側・右側は解除用のファームウェアを書き込み後、1行目のキーのどれかを押せば、ファームウェア書き込み可能な状態になります。ケーブルを外す代わりに1行目のキーを押すだけでも構いません。
 

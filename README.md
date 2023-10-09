@@ -14,7 +14,7 @@
 - ZMK Firmware
 ## Resources
 - [Build guide](./doc/buildguide.md)
-- PCB Files (KiCAD7, .zip(gerbers)): [Left](https://github.com/note96e/thorium/tree/main/pcbl) | [Right](https://github.com/note96e/thorium/tree/main/pcbr)
+- PCB Files (KiCad7, .zip(gerbers)): [Left](https://github.com/note96e/thorium/tree/main/pcbl) | [Right](https://github.com/note96e/thorium/tree/main/pcbr)
 - 3DP Files (.f3d, .step): [Cases and plates](https://github.com/note96e/thorium/tree/main/case)
 - ZMK Firmware configuration files: [Config](https://github.com/note96e/thorium-zmk-config) | [Reset](https://github.com/note96e/thorium-reset-zmk-config)
 
