@@ -6,9 +6,9 @@
 - Case (2)
 - Switch Plate (2)
 
-You can download Fusion 360 files (.f3d) and STEP files.    
+You can download Fusion 360 files (.f3d) and STEP files.  
 https://github.com/note96e/thorium/tree/main/case  
-STEP files can be ordered from JLCPCB (Black Resin is recommended).  
+STEP files can be used to order PCBs from JLCPCB (Black Resin is recommended).
 
 ### PCB (Thickness: 1.6mm)
 You can download KiCAD7 data.  
@@ -17,7 +17,7 @@ You can download KiCAD7 data.
 - Right half (1)
     - https://github.com/note96e/thorium/tree/main/pcbr
 
-The following files are Gerber files. You can order them from JLCPCB.  
+These files are Gerber files that can be used to order PCBs from JLCPCB.
 thorium_pcbl.zip, thorium_pcbr.zip
 
 ### Parts to be soldered to the front side of PCB
