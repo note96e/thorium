@@ -5,7 +5,8 @@
 - 34-keys
 - wireless
 - split
-- dongle  
+- dongle 
+- ZMK Studio 
 - MX switches, hotswap 
 - small PCB (96mm*77mm)
 - 3D printed cases and plates
