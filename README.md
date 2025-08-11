@@ -12,6 +12,7 @@
 - Lipo battery (260mAh)
 - Seeed Studio XIAO nRF52840
 - ZMK Firmware
+- ZMK Studio  
 ## Resources
 - [Build guide](./doc/buildguide.md)
 - PCB Files (KiCad7, .zip(gerbers)): [Left](https://github.com/note96e/thorium/tree/main/pcbl) | [Right](https://github.com/note96e/thorium/tree/main/pcbr)

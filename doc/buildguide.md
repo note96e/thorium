@@ -92,21 +92,23 @@ When charging is complete, the green LED will turn off. Disconnect the USB cable
 
 # Firmware
 
-Please refer to the official ZMK Firmware documentation for instructions on how to flash firmware, change keymap, etc.  
+Please refer to the official ZMK Firmware documentation for instructions on how to flash firmware, change keymap, etc.   
+The latest firmware supports ZMK Studio.
 
 You can download UF2 file from the following link.  
 https://github.com/note96e/thorium-zmk-config/releases  
 After downloading, unzip the thorium-x.x.x.zip file.
-- Dongle: thorium-seeeduino_xiao_ble-zmk.uf2  
+- Dongle: thorium_dongle-seeeduino_xiao_ble-zmk.uf2  
 - Left half: thorium_left-seeeduino_xiao_ble-zmk.uf2  
 - Right half: thorium_right-seeeduino_xiao_ble-zmk.uf2  
 
 You can download the UF2 file for the dongle and each half pairing reset.   
 https://github.com/note96e/thorium-reset-zmk-config/releases  
 After downloading, unzip the thorium-reset-x.x.x.zip file. 
-- Dongle: thorium_reset-seeeduino_xiao_ble-zmk.uf2  
+- Dongle: thorium_reset_dongle-seeeduino_xiao_ble-zmk.uf2  
 - Left half: thorium_reset_left-seeeduino_xiao_ble-zmk.uf2  
 - Right half: thorium_reset_right-seeeduino_xiao_ble-zmk.uf2  
+
 In the left and right halves, the first row of keys is assigned to &bootloader.
 
 ## Default keymap
@@ -120,3 +122,5 @@ The blue text is assigned the following key codes in ZMK.
 - USBOUT: &out OUT_USB
 - BTOUT: &out OUT_BLE
 - BTCLR: &bt BT_CLR
+- BTCLRALL: &bt BT_CLR_ALL
+- STUDIO: &studio_unlock
