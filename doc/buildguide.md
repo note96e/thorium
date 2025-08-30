@@ -124,3 +124,10 @@ The blue text is assigned the following key codes in ZMK.
 - BTCLR: &bt BT_CLR
 - BTCLRALL: &bt BT_CLR_ALL
 - STUDIO: &studio_unlock
+
+## Raytac MDBT50Q-RX
+You can use the RAYTAC MDBT50Q-RX as a dongle in place of the XIAO, but it must have the UF2 bootloader installed.  
+Use thorium_dongle-raytac_mdbt50q_rx-zmk.uf2 and thorium_reset_dongle-raytac_mdbt50q_rx-zmk.uf2.
+
+I'm currently using the module created by rschenk.
+https://github.com/rschenk/zmk-component-raytac-dongle
