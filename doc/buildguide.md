@@ -3,12 +3,14 @@
 ## Parts list
 
 ### 3D printed parts
-- Case (2)
-- Switch Plate (2)
+(Note) The design of the case and plate has been partially updated. Please be aware that the actual product may differ slightly from the photos shown.
 
-You can download Fusion 360 files (.f3d) and STEP files.  
+- Case (Left:1 Right:1)
+- Switch Plate (Left:1 Right:1)
+
+You can download Fusion 360 files (.f3d) and STEP files. Files with the old design are stored in the `old` folder.    
 https://github.com/note96e/thorium/tree/main/case  
-STEP files can be used to order PCBs from JLCPCB (Black Resin is recommended).
+STEP files can be used to order PCBs from JLCPCB (Black Resin is recommended).  
 
 ### PCB (Thickness: 1.6mm)
 You can download KiCAD7 data.  
@@ -91,7 +93,6 @@ Connect XIAO to a PC or charger with the USB cable, and turn the slide switch ON
 When charging is complete, the green LED will turn off. Disconnect the USB cable and turn the slide switch OFF.
 
 # Firmware
-
 Please refer to the official ZMK Firmware documentation for instructions on how to flash firmware, change keymap, etc.   
 The latest firmware supports ZMK Studio.
 
@@ -160,3 +161,6 @@ west build -p -S studio-rpc-usb-uart -b raytac_mdbt50q_rx -d build/thorium_dongl
 # reset
 west build -p -b raytac_mdbt50q_rx -d build/thorium_reset_dongle_raytac -- -DSHIELD=thorium_reset_dongle -DZMK_CONFIG=/home/xxx/thorium-reset-zmk-config -DZMK_EXTRA_MODULES=/home/xxx/zmk-component-raytac-dongle
 ```
+# (Optional) Foam
+Placing 3–3.5mm thick foam above and below the PCB helps reduce noise. The design files for the foam are stored below.
+https://github.com/note96e/thorium/tree/main/foam  
