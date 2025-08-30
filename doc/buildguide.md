@@ -98,16 +98,16 @@ The latest firmware supports ZMK Studio.
 You can download UF2 file from the following link.  
 https://github.com/note96e/thorium-zmk-config/releases  
 After downloading, unzip the thorium-x.x.x.zip file.
-- Dongle: thorium_dongle-seeeduino_xiao_ble-zmk.uf2  
-- Left half: thorium_left-seeeduino_xiao_ble-zmk.uf2  
-- Right half: thorium_right-seeeduino_xiao_ble-zmk.uf2  
+- Dongle: `thorium_dongle-seeeduino_xiao_ble-zmk.uf2`  
+- Left half: `thorium_left-seeeduino_xiao_ble-zmk.uf2`  
+- Right half: `thorium_right-seeeduino_xiao_ble-zmk.uf2`  
 
 You can download the UF2 file for the dongle and each half pairing reset.   
 https://github.com/note96e/thorium-reset-zmk-config/releases  
 After downloading, unzip the thorium-reset-x.x.x.zip file. 
-- Dongle: thorium_reset_dongle-seeeduino_xiao_ble-zmk.uf2  
-- Left half: thorium_reset_left-seeeduino_xiao_ble-zmk.uf2  
-- Right half: thorium_reset_right-seeeduino_xiao_ble-zmk.uf2  
+- Dongle: `thorium_reset_dongle-seeeduino_xiao_ble-zmk.uf2`  
+- Left half: `thorium_reset_left-seeeduino_xiao_ble-zmk.uf2`  
+- Right half: `thorium_reset_right-seeeduino_xiao_ble-zmk.uf2`  
 
 In the left and right halves, the first row of keys is assigned to &bootloader.
 
@@ -127,7 +127,36 @@ The blue text is assigned the following key codes in ZMK.
 
 ## Raytac MDBT50Q-RX
 You can use the RAYTAC MDBT50Q-RX as a dongle in place of the XIAO, but it must have the UF2 bootloader installed.  
-Use thorium_dongle-raytac_mdbt50q_rx-zmk.uf2 and thorium_reset_dongle-raytac_mdbt50q_rx-zmk.uf2.
+Use `thorium_dongle-raytac_mdbt50q_rx-zmk.uf2` and `thorium_reset_dongle-raytac_mdbt50q_rx-zmk.uf2`.
 
 I'm currently using the module created by rschenk.
 https://github.com/rschenk/zmk-component-raytac-dongle
+
+## Building firmware locally
+https://zmk.dev/docs/development/local-toolchain/setup  
+After setting up the environment as described above, execute the steps below.
+```
+cd ~
+git clone https://github.com/note96e/thorium-zmk-config.git
+git clone https://github.com/note96e/thorium-reset-zmk-config.git
+cd ~/zmk/app
+# fw
+west build -p -S studio-rpc-usb-uart -b seeeduino_xiao_ble -d build/thorium_dongle_xiao -- -DCONFIG_ZMK_STUDIO=y -DSHIELD=thorium_dongle -DZMK_CONFIG=/home/xxx/thorium-zmk-config
+west build -p -b seeeduino_xiao_ble -d build/thorium_left -- -DSHIELD=thorium_left -DZMK_CONFIG=/home/xxx/thorium-zmk-config
+west build -p -b seeeduino_xiao_ble -d build/thorium_right -- -DSHIELD=thorium_right -DZMK_CONFIG=/home/xxx/thorium-zmk-config
+# reset
+west build -p -b seeeduino_xiao_ble -d build/thorium_reset_dongle_xiao -- -DSHIELD=thorium_reset_dongle -DZMK_CONFIG=/home/xxx/thorium-reset-zmk-config
+west build -p -b seeeduino_xiao_ble -d build/thorium_reset_left -- -DSHIELD=thorium_reset_left -DZMK_CONFIG=/home/xxx/thorium-reset-zmk-config
+west build -p -b seeeduino_xiao_ble -d build/thorium_reset_right -- -DSHIELD=thorium_reset_right -DZMK_CONFIG=/home/xxx/thorium-reset-zmk-config
+```
+This will generate `~/zmk/app/build/thorium_*/zephyr/zmk.uf2`.  
+### for Raytac MDBT50Q-RX
+```
+cd ~
+git clone https://github.com/rschenk/zmk-component-raytac-dongle.git
+cd ~/zmk/app
+# fw
+west build -p -S studio-rpc-usb-uart -b raytac_mdbt50q_rx -d build/thorium_dongle_raytac -- -DCONFIG_ZMK_STUDIO=y -DSHIELD=thorium_dongle -DZMK_CONFIG=/home/xxx/thorium-zmk-config -DZMK_EXTRA_MODULES=/home/xxx/zmk-component-raytac-dongle
+# reset
+west build -p -b raytac_mdbt50q_rx -d build/thorium_reset_dongle_raytac -- -DSHIELD=thorium_reset_dongle -DZMK_CONFIG=/home/xxx/thorium-reset-zmk-config -DZMK_EXTRA_MODULES=/home/xxx/zmk-component-raytac-dongle
+```
