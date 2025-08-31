@@ -172,3 +172,4 @@ west build -p -b raytac_mdbt50q_rx -d build/thorium_reset_dongle_raytac -- -DSHI
 # (Optional) Foam
 Placing 3–3.5mm thick foam above and below the PCB helps reduce noise. The design files for the foam are stored below.
 https://github.com/note96e/thorium/tree/main/foam  
+By cutting the standoff sections of the keyboard case, the PCB can be supported by foam, resulting in a different typing feel.
