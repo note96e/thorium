@@ -1,6 +1,6 @@
 # Thorium keyboard
 ![](./img/thorium.jpg)
-> ![NOTE]
+> [!NOTE]
 > The design of the case and plate has been partially updated. Please be aware that the actual product may differ slightly from the photos shown.
 ## Features
 - ortholinear  
