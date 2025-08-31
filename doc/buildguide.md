@@ -129,7 +129,10 @@ The blue text is assigned the following key codes in ZMK.
 - BTOUT: &out OUT_BLE
 - BTCLR: &bt BT_CLR
 - BTCLRALL: &bt BT_CLR_ALL
-- STUDIO: &studio_unlock
+- STUDIO: &studio_unlock  
+
+The following outlines how key codes relate to USB and Bluetooth connectivity.  
+![](../img/connect.png)  
 
 ## Raytac MDBT50Q-RX
 You can use the Raytac MDBT50Q-RX as a dongle in place of the XIAO, but it must have the UF2 bootloader installed.  
