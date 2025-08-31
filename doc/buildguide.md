@@ -3,7 +3,8 @@
 ## Parts list
 
 ### 3D printed parts
-(Note) The design of the case and plate has been partially updated. Please be aware that the actual product may differ slightly from the photos shown.
+> [!NOTE]
+> The design of the case and plate has been partially updated. Please be aware that the actual product may differ slightly from the photos shown.
 
 - Case (Left:1 Right:1)
 - Switch Plate (Left:1 Right:1)
@@ -20,7 +21,7 @@ You can download KiCAD7 data.
     - https://github.com/note96e/thorium/tree/main/pcbr
 
 These files are Gerber files that can be used to order PCBs from JLCPCB.
-thorium_pcbl.zip, thorium_pcbr.zip
+`thorium_pcbl.zip`, `thorium_pcbr.zip`
 
 ### Parts to be soldered to the front side of PCB
 - Pogo pin: RTLECS GB15-07020-0818-2A (4)
@@ -46,9 +47,11 @@ thorium_pcbl.zip, thorium_pcbr.zip
 - Bumpon
 - Type-C USB Cable
 
-#### Note
-Pogo pins and Lipo batteries are not widely available. Alternatives may not work well.  
-When using Lipo batteries, make sure they have an over-discharge protection circuit and that the polarity is correct.
+> [!NOTE]
+> Pogo pins and Lipo batteries are not widely available. Alternatives may not work well.
+  
+> [!CAUTION]
+> When using Lipo batteries, make sure they have an over-discharge protection circuit and that the polarity is correct.
 
 ## Tools
 - Soldering iron
@@ -83,9 +86,11 @@ Assemble each half of the keyboard in the following order.
     - Install the remaining switches.
 - Install the keycaps.
 
-#### Note
-Pogo pins must be soldered vertically to avoid shorts and contact failures. I could not find a way to solder them well.  
-The distance between the back side of XIAO and the front side of the PCB is 6 to 7 mm. Cut the pins of the pin headers to adjust if necessary.
+> [!NOTE]
+>Pogo pins must be soldered vertically to avoid shorts and contact failures. I could not find a way to solder them well. 
+
+> [!NOTE]
+>The distance between the back side of XIAO and the front side of the PCB is 6 to 7 mm. Cut the pins of the pin headers to adjust if necessary.
 
 ## Charging
 Charge the battery after assembly.  
@@ -127,7 +132,7 @@ The blue text is assigned the following key codes in ZMK.
 - STUDIO: &studio_unlock
 
 ## Raytac MDBT50Q-RX
-You can use the RAYTAC MDBT50Q-RX as a dongle in place of the XIAO, but it must have the UF2 bootloader installed.  
+You can use the Raytac MDBT50Q-RX as a dongle in place of the XIAO, but it must have the UF2 bootloader installed.  
 Use `thorium_dongle-raytac_mdbt50q_rx-zmk.uf2` and `thorium_reset_dongle-raytac_mdbt50q_rx-zmk.uf2`.
 
 I'm currently using the module created by rschenk.
